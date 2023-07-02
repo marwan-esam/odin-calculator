@@ -22,7 +22,7 @@ body{
     height: 700px;
     padding: 20px;
     border: 5px solid black;
-    border-radius: 8px;
+    border-radius: 20px;
     background-color: #BFACB5;
     display: flex;
     flex-direction: column;
@@ -42,8 +42,17 @@ body{
     border: none;
     border-radius: 8px;
     background-color: #FFC759;
-    font-size: 100px;
-    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+}
+
+.type-space{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.operation-space{
+    font-size: x-large
 }
 
 
