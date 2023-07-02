@@ -5,7 +5,7 @@ class Calculator{
             '-' : (num1, num2) => num1 - num2,
             '*' : (num1, num2) => num1 * num2,
             '/' : (num1, num2) => num1 / num2,
-            '%' : (num1, num2) => num1 % num2, 
+            '%' : (num1, num2) => ((num1 % num2) + num2) % num2, 
         }
         this.num1 = 0;
         this.op = null;
@@ -102,6 +102,9 @@ class Calculator{
                 this.operationSpace.textContent = this.operationValue;
                 this.op = buttonValue;
             }
+            if(this.typeSpace.textContent.length > 22){
+                clearDisplay.bind(this)();
+            }
         }
 
         function clearDisplay () {
@@ -149,9 +152,13 @@ class Calculator{
                 this.typeSpace.textContent = this.typeValue;
                 this.operationSpace.textContent = this.operationValue;
             }
+            if(this.typeSpace.textContent.length > 22){
+                clearDisplay.bind(this)();
+            }
         }
 
         function addDot () {
+            if(this.typeValue.length === 10) return;
             const split = this.operationValue.split(' ');
             if(split.length === 3){
                 if(!split[2].includes('.')){
