@@ -10,9 +10,11 @@ html, body{
 }
 
 body{
+    padding-top: 30px;
+    padding-bottom: 5px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     background-color: #1E7167;
 }
@@ -103,18 +105,43 @@ button.sys:hover{
     background-color: #D7431DCC;
 }
 
-button.op{
+button.digit{
     background-color: #DFAC2A;
 }
 
-button.op:hover{
+button.digit:hover{
     background-color: #DFAC2ACC;
 }
 
-button.digit{
+button.op{
     background-color: #EF7A1A;
 }
 
-button.digit:hover{
+button.op:hover{
     background-color: #EF7A1ACC;
+}
+
+.footer{
+    justify-self: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    gap: 20px;
+}
+
+.author{
+    font-size: 20px;
+    font-weight: bold;
+    color: #13242A;
+}
+
+.github-logo img{
+    width: 30px;
+    height: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.github-logo img:hover{
+    transform: rotate(360deg) scale(1.1);
 }
